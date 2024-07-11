@@ -3,8 +3,8 @@ import json
 
 from flask import Blueprint, current_app, request
 
-from app.context import get_context
-from app.domain.book import Book
+from context import get_context
+from domain.book import Book
 
 
 bp = Blueprint("book", __name__)
@@ -31,7 +31,7 @@ def add_book():
     return {"id": book_id, "book": book}
 
 
-@bp.route("/", methods=['DELETE'])
+@bp.route("/<id>", methods=['DELETE'])
 def delete_book(id):
     # Получаем контекст
     ctx = get_context(current_app)

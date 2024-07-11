@@ -1,7 +1,7 @@
 from flask import g
 
-from app.application.book_service import BookService
-from app.infra.storage.mem_storage import MemoryStorage
+from application.book_service import BookService
+from infra.storage.mem_storage import MemoryStorage
 
 
 # Хелпер класс для хранения зависимостей
