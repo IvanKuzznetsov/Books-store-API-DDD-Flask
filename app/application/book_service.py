@@ -5,8 +5,15 @@ class BookService:
     def add(self, book):
         return self.storage.add(book)
 
+    def get_all(self):
+        return self.storage.get_all()
+
+    def get(self, id):
+        return self.storage.get(id)
+
+    def update(self, book):
+        return self.storage.update(book)
+
     def delete(self, id):
         return self.storage.delete(id)
 
-    def get(self):
-        return self.storage.get()
